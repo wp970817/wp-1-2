@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+$font-size:37.5px !default;
+@function rem($px){
+    @return $px / $font-size * 1rem;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    @extend body;
+    display: flex;
+    flex-direction: column;
+    main{
+        flex: 1;
+        text-align: center;
+        line-height: rem(200px);
+    }
+    footer{
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+        span{
+            flex: 1;
+            text-align: center;
+        }
+    }
+}
